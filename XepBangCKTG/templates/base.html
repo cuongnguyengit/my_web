@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+
+        <meta charset="utf-8">
+        <title>Tạo trang web với bootstrap</title>
+{#        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">#}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+<!--        <script src="../bootstrap/js/jquery-3.1.1.min.js"></script>-->
+        <script src = "{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2">
+                    <center>
+                        <img src="{{ url_for('static', filename='image/MAN_Title.png') }}" class="responsive-img">
+                    </center>
+                </div>
+                <div class="col-sm-8">
+                    <center>
+                        <h1>Cuong's Blog</h1>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="bs-slidebar">
+                        <ul class="nav flex-column">
+                            <li><a href="/"><h2> Trang chủ </h2></a> </li>
+                            <li><a href="/"><h2> Bóng đá </h2></a> </li>
+                            <li><a href="/lol"><h2> Liên minh huyền thoại </h2></a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            {% block view %}
+
+            {%  endblock %}
+        </div>
+
+    </body>
+</html>

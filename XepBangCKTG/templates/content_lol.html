@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Horizontal form</h2>
+    <form class="form-horizontal" action="{{ url_for('get_view_table_lol') }}" method="get">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="club">Tên đội:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="club" placeholder="Enter club name" name="club">
+            </div>
+        </div>
+
+         <div class="form-group">
+            <label class="control-label col-sm-2" for="country">Quốc gia:</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="country">
+                    <option>Hàn Quốc</option>
+                    <option>Việt Nam</option>
+                    <option>Trung Quốc</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="country">Loại hạt giống:</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="country">
+                    <option>FunPlus Phoenix</option>
+                    <option>2</option>
+                    <option>3</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block view %}
+
+    <h1>VIEW ở đây</h1>
+{% endblock %}
